@@ -28,4 +28,36 @@ const country = "India";
 // country="USA";
 //It causes the error cz, const value can't be reassigned
 console.log(country);
+//III: Type Annotations - used to specify the type of a variable, parameter, or return value
+//1. string,number and boolean
+let productName = "Water Bottle";
+let qty = 2;
+let isDelivered = true;
+function displayDetails(productName, qty, isDelivered) {
+    return `Your product ${productName} as per quantity ${qty} is delivered :-- ${isDelivered} `;
+}
+let details = displayDetails(productName, qty, isDelivered);
+console.log(details);
+//IV. Types of Scope
+//1.Global Scope-can access anywhere
+let price = "$12";
+function displayPrice(price) {
+    return `Your product price is ${price}`;
+}
+let res = displayPrice(price);
+console.log(res);
+//2.Function scope-can access inside the function only
+function displayName() {
+    let name1 = "SRIKANTH K";
+    console.log(name1);
+}
+// console.log(name1);
+//It causes the error cz,name1 is in function scope
+//3.Block Scope
+if (true) {
+    let age = 21;
+    console.log(age);
+}
 export {};
+// console.log(age);
+// It also causes the error cz,age is in the block scope
