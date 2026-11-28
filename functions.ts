@@ -23,6 +23,17 @@
             }
             let output:number=mul(28,10);
             console.log("Multiplication of given two values : "+output);
+
+        //1.4 Call Signatures - It's used to define the parameter types,return type and also some extra properties
+            type Arithmetic={
+                (a:number,b:number):number;
+                nameOfOperation:string;
+            }
+            let add1:Arithmetic=Object.assign((a:number,b:number)=>a+b,  
+            {nameOfOperation:"Addition"}
+            );
+            console.log(`${add1.nameOfOperation} of given Numbers : ${add1(78,42)}`);
+            
         
     // 2.Function Parameters(I Can give default value,rest operator,optional value,required)
             //2.1. Optional and Default Parameters in Functions
